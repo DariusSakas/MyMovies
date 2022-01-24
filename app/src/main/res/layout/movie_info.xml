@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+            android:text="Name:"
+            android:textColor="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewLabelTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.5"
+            android:id="@+id/guidelineCenter"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/textViewTitle"
+            app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="Original name:"
+            android:textColor="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewLabelOriginalTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/textViewOriginalTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            app:layout_constraintStart_toStartOf="@+id/guidelineCenter" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="Rating:"
+            android:textColor="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewLabelRating"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOriginalTitle"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/textViewRating"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOriginalTitle"
+            app:layout_constraintStart_toStartOf="@+id/guidelineCenter" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="Release date:"
+            android:textColor="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewLabelReleaseDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRating"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/textViewReleaseDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRating"
+            app:layout_constraintStart_toStartOf="@+id/guidelineCenter" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="Description"
+            android:textColor="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewLabelDescription"
+            app:layout_constraintTop_toBottomOf="@+id/textViewReleaseDate"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/textViewDescription"
+            app:layout_constraintTop_toBottomOf="@+id/textViewReleaseDate"
+            app:layout_constraintStart_toStartOf="@+id/guidelineCenter" app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:nestedScrollingEnabled="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@id/recyclerViewTrailers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescription"
+    />
+    <androidx.recyclerview.widget.RecyclerView
+            android:nestedScrollingEnabled="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@id/recyclerViewReviews"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewTrailers"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

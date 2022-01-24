@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recyclerViewTrailers" type="id"/>
+    <item name="recyclerViewReviews" type="id"/>
+    <item name="textViewNameOfVideo" type="id"/>
+</resources>
